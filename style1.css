@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Ubuntu:ital,wght@1,300&display=swap");
+body {
+  background-color: antiquewhite;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: "Ubuntu", sans-serif;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 65px;
+  background-color: black;
+  color: white;
+}
+
+nav ul li {
+  padding: 0 12px;
+  cursor: pointer;
+}
+.brand img {
+  width: 65px;
+  padding: 0 3px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.container {
+  min-height: 72vh;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  margin: 23px auto;
+  width: 51%;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.bottom {
+  position: sticky;
+  height: 130px;
+  background-color: black;
+  color: white;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icons {
+  margin-top: 14px;
+}
+
+.icons i {
+  cursor: pointer;
+}
+
+#myProgressBar {
+  width: 80vw;
+  cursor: pointer;
+}
+
+.songItemContainer {
+  margin-top: 44px;
+  margin-bottom: 94px;
+}
+
+.songItem {
+  height: 50px;
+  display: flex;
+  background-color: white;
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+  
+}
+
+.songItem img {
+  width: 43px;
+  margin: 0 23px;
+  border-radius: 34px;
+}
+
+.timestamp {
+  margin: 0 23px;
+}
+
+.timestamp i {
+  cursor: pointer;
+}
+
+.songInfo {
+  position: absolute;
+  left: 10vw;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+}
+
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.SongList {
+  column-count: 2;
+  column-gap: 40px;
+}
+
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (max-width: 750px) {
+  #background-video {
+    display: none;
+  }
+  body {
+    background: url("BackgroundvideoBackup1.png") no-repeat;
+    background-size: cover;
+  }
+}

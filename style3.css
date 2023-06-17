@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Ubuntu:ital,wght@1,300&display=swap");
+body {
+  background-color: black;
+}
+.text-box {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align:center;  
+}
+
+.heading-primary1 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.heading-primary-main1 {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInleft;
+    animation-duration: 2s;
+}
+@keyframes moveInleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.paragraph-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;  
+  }
+  
+  .heading-primary {
+      color: white;
+      text-transform: uppercase;
+  }
+  
+  .heading-primary-main {
+      display: block;
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 15px;
+      animation-name: moveInleft;
+      animation-duration: 2s;
+  }
+  @keyframes moveInleft {
+      0% {
+          opacity: 0;
+          transform: translateX(-100px);
+      }
+  
+      80% {
+          transform: translateX(10px);
+      }
+      100% {
+          opacity: 1;
+          transform: translate(0);
+      }
+  }
+  
