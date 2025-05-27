@@ -51,7 +51,7 @@ masterPlay.addEventListener('click', () => {
 audioElement.addEventListener('timeupdate', () => {
 
     //update SeekBar
-    progress = parseInt((audioElement.currentTime / audioElement.duration * 100));
+    let progress = parseInt((audioElement.currentTime / audioElement.duration * 100));
     myProgressBar.value = progress;
 })
 myProgressBar.addEventListener('change', () => {
@@ -80,11 +80,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
     })
 })
 document.getElementById('next').addEventListener('click', () => {
-    if (songIndex >= 19) {
-        songIndex = 0;
-    } else {
-        songIndex += 1;
-    }
+    songIndex = (songIndex + 1) % songs.length;
     //audioElement.src = `Songs/${songIndex + 1}.mp3`;
     audioElement.src = songs[songIndex].filePath;
     masterSongName.innerText = songs[songIndex].songName;
@@ -95,11 +91,7 @@ document.getElementById('next').addEventListener('click', () => {
 
 })
 document.getElementById('previous').addEventListener('click', () => {
-    if (songIndex <= 0) {
-        songIndex = 0;
-    } else {
-        songIndex -= 1;
-    }
+    songIndex = (songIndex - 1 + songs.length) % songs.length;
     //audioElement.src = `Songs/${songIndex + 1}.mp3`;
     audioElement.src = songs[songIndex].filePath;
     masterSongName.innerText = songs[songIndex].songName; 
